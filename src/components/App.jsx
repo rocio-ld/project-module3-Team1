@@ -1,4 +1,5 @@
 import '../scss/App.scss';
+import laptop from '../images/laptop-code-solid.svg';
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
 
     <header className="header">
       <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-        <img className="header__companyLogo" src="./images/laptop-code-solid.svg" alt="Logo proyectos molones"/>
+        <img className="header__companyLogo" src={laptop} alt="Logo proyectos molones"/>
         <h1 className="header__title">Proyectos molones</h1>
       </a>
       <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
@@ -41,11 +42,10 @@ function App() {
             <div className="card__technicalInfo">
               <p className="card__technologies">React JS - HTML - CSS</p>
           
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">
-                Web link
+              <a className="icon" href="#" title="Haz click para ver el proyecto online">
+              <i className="fa-solid fa-globe"></i>
               </a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto">
-                GitHub link
+              <a className="icon" href="#" title="Haz click para ver el código del proyecto"> <i className="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
