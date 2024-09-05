@@ -8,33 +8,35 @@ function App() {
   //estados de los inputs
   const [name, setName] = useState('');
   const [slogan, setSlogan] = useState('');
-  const [repo, setRepo] = useState('HOLA');
-  const [demo, setDemo] = useState('HOLA');
+  const [repo, setRepo] = useState('');
+  const [demo, setDemo] = useState('');
   const [tech, setTech] = useState('');
   const [desc, setDesc] = useState('');
   const [autor, setAutor] = useState('');
   const [job, setJob] = useState('');
 
+
   const handleChangeForm = (event)=>{
     event.preventDefault();
     const id = event.target.id;
+    const value = event.target.value
     console.log(id);
     if (id === 'name'){
-      setName(event.target.value);
+      setName(value);
     } else if (id === 'slogan'){
-      setSlogan(event.target.value);
+      setSlogan(value);
     } else if (id === 'repo'){
-      setRepo(event.target.value);
+      setRepo(value);
     } else if (id === 'demo'){
-      setDemo(event.target.value);
+      setDemo(value);
     } else if (id === 'technologies'){
-      setTech(event.target.value);
+      setTech(value);
     } else if (id === 'desc'){
-      setDesc(event.target.value);
+      setDesc(value);
     } else if (id === 'autor'){
-      setAutor(event.target.value);
+      setAutor(value);
     } else if (id === 'job'){
-      setJob(event.target.value);
+      setJob(value);
     }
   }
 
@@ -62,29 +64,27 @@ function App() {
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
-            <p className="card__job">
-              {job}
-            </p>
-            <h3 className="card__name">{autor}</h3>
+            <p className="card__job">{job || 'Full Stack Developer'}</p>
+            <h3 className="card__name">{autor || 'Emmelie Björklund'}</h3> 
           </div>
       
           <div className="card__project">            
-            <h3 className="card__name">{name}</h3>
-            <p className="card__slogan">{slogan}</p>
+            <h3 className="card__name">{name || 'Elegant Workspace'}</h3>
+            <p className="card__slogan">{slogan || 'Diseños Exclusivos'}</p>
             <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">{desc}</p>
+            <p className="card__description">{desc ||'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Amet faucibus commodo tellus lectus lobortis. Ultricies lacus, facilisis arcu ac mauris, laoreet sit.'}</p>
 
             <div className="card__technicalInfo">
-              <p className="card__technologies">{tech}</p>
+              <p className="card__technologies">{tech || 'React JS - HTML- CSS'}</p>
           
               <a className="icon" href={demo} title="Haz click para ver el proyecto online">
-              <i className="fa-solid fa-globe"></i>
+              <i className="fa-solid fa-globe emoji"></i>
               </a>
-              <a className="icon" href={repo} title="Haz click para ver el código del proyecto"> <i className="fa-brands fa-github"></i>
+              <a className="icon" href={repo} title="Haz click para ver el código del proyecto"> <i className="fa-brands fa-github emoji"></i>
               </a>
             </div>
           </div>
-        </article>
+        </article> 
       </section>
       <form className="addForm" onChange={handleChangeForm}>
         <h2 className="title">Información</h2>
