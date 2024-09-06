@@ -1,7 +1,7 @@
 
 
 
-function ButtonImage(props){
+function buttonImage(props){
     return(
         <>
         <label htmlFor="image" className="button"> {props.text}</label>
@@ -11,4 +11,4 @@ function ButtonImage(props){
         
     )
 }
- export default ButtonImage;
+ export default buttonImage;
