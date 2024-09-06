@@ -1,6 +1,11 @@
 import '../scss/App.scss';
-import laptop from '../images/laptop-code-solid.svg';
-import adalab from '../images/adalab.png';
+
+import Header from './Header';
+import SectionProject from './SectionProject';
+import Card from './Card';
+//import Form from './Form';
+import Footer from './Footer';
+import ButtonImage from './ButtonImage';
 import { useState } from 'react';
 
 
@@ -42,50 +47,12 @@ function App() {
 
   return (
     <div className="container">
-    <header className="header">
-      <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-        <img className="header__companyLogo" src={laptop} alt="Logo proyectos molones"/>
-        <h1 className="header__title">Proyectos molones</h1>
-      </a>
-      <img className="logoSponsor" src={adalab} alt="Logo Adalab"/>
-    </header>
+    <Header /> 
     
     <main className="main">
-      <section className="hero">
-        <h2 className="title">Proyectos molones</h2>
-        <p className="hero__text">Escaparate en línea para recoger ideas a través de la tecnología</p>
-        <a className="button--link" href="./">Ver proyectos</a>
-      </section>
-
-      <section className="preview">
-        <div className="projectImage"></div>
-        <article className="card">
-          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
-
-          <div className="card__author">
-            <div className="card__authorPhoto"></div>
-            <p className="card__job">{job || 'Full Stack Developer'}</p>
-            <h3 className="card__name">{autor || 'Emmelie Björklund'}</h3> 
-          </div>
-      
-          <div className="card__project">            
-            <h3 className="card__name">{name || 'Elegant Workspace'}</h3>
-            <p className="card__slogan">{slogan || 'Diseños Exclusivos'}</p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">{desc ||'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Amet faucibus commodo tellus lectus lobortis. Ultricies lacus, facilisis arcu ac mauris, laoreet sit.'}</p>
-
-            <div className="card__technicalInfo">
-              <p className="card__technologies">{tech || 'React JS - HTML- CSS'}</p>
-          
-              <a className="icon" href={demo} title="Haz click para ver el proyecto online">
-              <i className="fa-solid fa-globe emoji"></i>
-              </a>
-              <a className="icon" href={repo} title="Haz click para ver el código del proyecto"> <i className="fa-brands fa-github emoji"></i>
-              </a>
-            </div>
-          </div>
-        </article> 
-      </section>
+      <SectionProject />
+      <Card name={name} slogan={slogan} repo={repo} demo={demo} tech={tech} desc={desc} autor={autor} job={job} />
+     {/*<Form />*/} 
       <form className="addForm" onChange={handleChangeForm}>
         <h2 className="title">Información</h2>
         <fieldset className="addForm__group">
@@ -107,21 +74,16 @@ function App() {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <label htmlFor="image" className="button">Subir foto del proyecto</label>
-          <input className="addForm__hidden" type="file" name="image" id="image"/>
+          <ButtonImage  text="Subir foto del proyecto" />
+         
           <label htmlFor="photo" className="button">Subir foto de la autora</label>
           <input className="addForm__hidden" type="file" name="photo" id="photo"/>
           <button className="button--large">Guardar proyecto</button>
         </fieldset>
         
       </form>
-    </main>
-
-    <footer className="footer">
-      <img className="logoSponsor" src={adalab} alt="Logo Adalab"/>
-    </footer>
-
-    
+    </main> 
+    <Footer />
   </div>
   )
 }
