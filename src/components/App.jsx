@@ -76,8 +76,7 @@ function App() {
         <fieldset className="addForm__group--upload">
           <ButtonImage  text="Subir foto del proyecto" />
          
-          <label htmlFor="photo" className="button">Subir foto de la autora</label>
-          <input className="addForm__hidden" type="file" name="photo" id="photo"/>
+          <ButtonImage  text="Subir foto de la autora" />
           <button className="button--large">Guardar proyecto</button>
         </fieldset>
         
