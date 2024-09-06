@@ -21,6 +21,7 @@ function App() {
   const [job, setJob] = useState('');
 
 
+
   const handleChangeForm = (event)=>{
     event.preventDefault();
     const id = event.target.id;
@@ -74,7 +75,7 @@ function App() {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <ButtonImage  text="Subir foto del proyecto" />
+          <ButtonImage  text='Subir foto del proyecto' />
          
           <label htmlFor="photo" className="button">Subir foto de la autora</label>
           <input className="addForm__hidden" type="file" name="photo" id="photo"/>
