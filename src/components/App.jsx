@@ -74,9 +74,9 @@ function App() {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <ButtonImage  text="Subir foto del proyecto" />
+          <ButtonImage  text="Subir foto del proyecto" id="imageProject" />
          
-          <ButtonImage  text="Subir foto de la autora" />
+          <ButtonImage  text="Subir foto de la autora" id="imageAutor" />
           <button className="button--large">Guardar proyecto</button>
         </fieldset>
         

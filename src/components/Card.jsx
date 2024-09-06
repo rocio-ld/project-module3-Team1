@@ -1,5 +1,5 @@
 
-function card(props){
+function Card(props){
     return(
         <section className="preview">
         <div className="projectImage"></div>
@@ -34,4 +34,4 @@ function card(props){
 
     )
 }
-export default card;
+export default Card;

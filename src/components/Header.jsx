@@ -4,7 +4,7 @@ import adalab from '../images/adalab.png';
 
 
 
-function header(){
+function Header(){
     return(
         <header className="header">
       <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
@@ -18,4 +18,4 @@ function header(){
     )
 }
 
-export default header;
+export default Header;

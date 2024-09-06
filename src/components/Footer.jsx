@@ -1,6 +1,6 @@
 import adalab from '../images/adalab.png';
 
-function footer () {
+function Footer () {
 
  return(
     <footer className="footer">
@@ -9,4 +9,4 @@ function footer () {
 
  )
 }
-export default footer;
+export default Footer;
