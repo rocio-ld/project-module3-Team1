@@ -7,6 +7,7 @@ import Card from './Card';
 import Footer from './Footer';
 import ButtonImage from './ButtonImage';
 import { useState } from 'react';
+import ButtonSave from './ButtonSave';
 
 
 function App() {
@@ -76,9 +77,8 @@ function App() {
     
         <fieldset className="addForm__group--upload">
           <ButtonImage  text="Subir foto del proyecto" id="imageProject" />
-         
           <ButtonImage  text="Subir foto de la autora" id="imageAutor" />
-          <button className="button--large">Guardar proyecto</button>
+          <ButtonSave />
         </fieldset>
         
       </form>
