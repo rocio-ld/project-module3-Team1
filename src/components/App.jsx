@@ -12,14 +12,16 @@ import ButtonSave from './ButtonSave';
 
 function App() {
   //estados de los inputs
-  const [name, setName] = useState('');
-  const [slogan, setSlogan] = useState('');
-  const [repo, setRepo] = useState('');
-  const [demo, setDemo] = useState('');
-  const [tech, setTech] = useState('');
-  const [desc, setDesc] = useState('');
-  const [autor, setAutor] = useState('');
-  const [job, setJob] = useState('');
+  const [form, setForm]= useState({
+    name:"",
+    slogan:"",
+    repo:"",
+    demo:"",
+    tech:"",
+    desc:"",
+    autor:"",
+    job:""})
+ 
 
 
 
@@ -29,21 +31,21 @@ function App() {
     const value = event.target.value
     console.log(id);
     if (id === 'name'){
-      setName(value);
+      setForm({...form,name:value});
     } else if (id === 'slogan'){
-      setSlogan(value);
+      setForm({...form,slogan:value});
     } else if (id === 'repo'){
-      setRepo(value);
+      setForm({...form,repo:value});
     } else if (id === 'demo'){
-      setDemo(value);
+      setForm({...form,demo:value});
     } else if (id === 'technologies'){
-      setTech(value);
+      setForm({...form,tech:value});
     } else if (id === 'desc'){
-      setDesc(value);
+      setForm({...form,desc:value});
     } else if (id === 'autor'){
-      setAutor(value);
+      setForm({...form,autor:value});
     } else if (id === 'job'){
-      setJob(value);
+      setForm({...form,job:value});
     }
   }
 
@@ -53,7 +55,7 @@ function App() {
     
     <main className="main">
       <SectionProject />
-      <Card name={name} slogan={slogan} repo={repo} demo={demo} tech={tech} desc={desc} autor={autor} job={job} />
+      <Card form={form}/>
      {/*<Form />*/} 
       <form className="addForm" onChange={handleChangeForm}>
         <h2 className="title">Información</h2>
