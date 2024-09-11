@@ -1,4 +1,4 @@
-
+import '../scss/SectionProject.scss';
 
 
 function SectionProject (){

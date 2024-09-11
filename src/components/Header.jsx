@@ -1,5 +1,6 @@
 import laptop from '../images/laptop-code-solid.svg';
 import adalab from '../images/adalab.png';
+import '../scss/Header.scss';
 
 
 

@@ -1,4 +1,4 @@
-
+import '../scss/ButtonImage.scss';
 
 
 function ButtonImage(props){

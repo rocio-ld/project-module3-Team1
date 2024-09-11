@@ -1,4 +1,4 @@
-
+import '../scss/Card.scss';
 function Card({form}){
     return(
         <section className="preview">

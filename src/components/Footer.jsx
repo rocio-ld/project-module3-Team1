@@ -1,4 +1,5 @@
 import adalab from '../images/adalab.png';
+import '../scss/Footer.scss';
 
 function Footer () {
 
