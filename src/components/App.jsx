@@ -26,10 +26,7 @@ function App() {
 
 
 // este es un evento que pasaremos por prop al componente de Form
-  const changeForm = (event)=>{
-    event.preventDefault();
-    const id = event.target.id;
-    const value = event.target.value
+  const changeForm = (id, value)=>{
     console.log(id);
     if (id === 'name'){
       setForm({...form,name:value});

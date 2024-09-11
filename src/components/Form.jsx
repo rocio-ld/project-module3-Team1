@@ -15,27 +15,32 @@ export default form;*/
 
 
 function Form({changeForm}) {
-    
+    const handleChangeForm = (event)=>{
+        event.preventDefault();
+        const id = event.target.id;
+        const value = event.target.value;
+        changeForm(id, value)
+    }
     
   return (
-    <form className="addForm">
+    <form className="addForm" onChange={handleChangeForm}>
         <h2 className="title">Información</h2>
         <fieldset className="addForm__group">
           <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-          <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto"onChange={changeForm}/>
-          <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"onChange={changeForm}/>
+          <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto"onChange={handleChangeForm}/>
+          <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"onChange={handleChangeForm}/>
           <div className="addForm__2col">
-          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio"onChange={changeForm}/>
-          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo"onChange={changeForm}/>
+          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio"onChange={handleChangeForm}/>
+          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo"onChange={handleChangeForm}/>
           </div>         
-          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías"onChange={changeForm}/>
-          <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5"onChange={changeForm}></textarea>
+          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías"onChange={handleChangeForm}/>
+          <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5"onChange={handleChangeForm}></textarea>
         </fieldset>
     
         <fieldset className="addForm__group">
           <legend className="addForm__title">Cuéntanos sobre la autora</legend>
-          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre"onChange={changeForm}/>
-          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo"onChange={changeForm}/>
+          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre"onChange={handleChangeForm}/>
+          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo"onChange={handleChangeForm}/>
         </fieldset>
     
         <fieldset className="addForm__group--upload">
