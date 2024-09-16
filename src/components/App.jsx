@@ -21,7 +21,16 @@ function App() {
     tech:"",
     desc:"",
     autor:"",
-    job:""})
+    job:"",
+    image:"",
+    photo:"",
+  })
+  // esta funcion modifica la imagen y la foto. Para ello ponemos la prop key entre [] y así modificamos tanto la img como la foto
+  const updateAvatar = (key, value) => {
+    setForm({...form, [key]:value});
+  };
+  
+ 
  
 
 
@@ -55,7 +64,7 @@ function App() {
       <SectionProject />
       <Card form={form}/>
      {/*<Form />*/} 
-     <Form changeForm={changeForm}/>
+     <Form changeForm={changeForm} updateAvatar={updateAvatar}/>
       
     </main> 
     <Footer />

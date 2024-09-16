@@ -14,13 +14,13 @@ CAMBIAR NOMBRE DE LA FUNCION APP YA QUE DEJA DE HACER EL EVENTO .
 export default form;*/
 
 
-function Form({changeForm}) {
+function Form({changeForm, updateAvatar}) {
     const handleChangeForm = (event)=>{
         event.preventDefault();
         const id = event.target.id;
         const value = event.target.value;
         changeForm(id, value)
-    }
+    } 
     
   return (
     <form className="addForm" onChange={handleChangeForm}>
@@ -44,8 +44,8 @@ function Form({changeForm}) {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <ButtonImage  text="Subir foto del proyecto" id="imageProject" />
-          <ButtonImage  text="Subir foto de la autora" id="imageAutor" />
+          <ButtonImage  text="Subir foto del proyecto" id="photo" updateAvatar={updateAvatar} />
+          <ButtonImage  text="Subir foto de la autora" id="image" updateAvatar={updateAvatar} />
           <ButtonSave />
         </fieldset>
         
