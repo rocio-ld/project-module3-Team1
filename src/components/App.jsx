@@ -8,6 +8,8 @@ import Card from './Card';
 import Footer from './Footer';
 import Form from './Form';
 import { useState } from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Landing from './Landing';
 
 
 
@@ -30,10 +32,6 @@ function App() {
     setForm({...form, [key]:value});
   };
   
- 
- 
-
-
 // este es un evento que pasaremos por prop al componente de Form
   const changeForm = (id, value)=>{
     console.log(id);
@@ -58,17 +56,21 @@ function App() {
 
   return (
     <div className="container">
-    <Header /> 
-    
-    <main className="main">
-      <SectionProject />
-      <Card form={form}/>
-     {/*<Form />*/} 
-     <Form changeForm={changeForm} updateAvatar={updateAvatar}/>
-      
-    </main> 
+      <Header /> 
+    <Routes>
+      <Route path="/" element={<Landing />}/>
+      <Route path="/create" element={
+        <main className="main">
+          <SectionProject />
+          <Card form={form}/>
+          {/*<Form />*/} 
+          <Form changeForm={changeForm} updateAvatar={updateAvatar}/>
+        </main> 
+      } />
+    </Routes>
     <Footer />
-  </div>
+    </div> 
+   
   )
 }
 
