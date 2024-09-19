@@ -7,7 +7,7 @@ function Card({form}){
     return(
         <section className="preview">
         <div className="projectImage">
-          <img src={form.photo || ebook } alt="" />
+          <img className="projectImage__ebook" src={form.photo || ebook } alt="" />
         </div>
         <article className="card">
           <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>

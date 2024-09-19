@@ -1,8 +1,10 @@
+
 .preview .projectImage {
     width: 100%;
-    aspect-ratio: 1 / 1;
     outline: solid 1px pink;
-  
+  &__ebook{
+    width: 100%;
+  }
 
   }
   
